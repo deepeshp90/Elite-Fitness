@@ -301,7 +301,6 @@ span {
     .about-img img {
         width: 400px; 
         margin: 0 auto;
-         
     }
 
     .about-content {
@@ -340,14 +339,14 @@ span {
 
     .about-img img {
         width: 250px; 
-        }
+    }
 
     .about-content .heading {
         font-size: 3rem; 
     }
 
     .about-content p {
-        font-size: 1.2rem; /
+        font-size: 1.2rem; 
     }
 }
 
@@ -639,21 +638,56 @@ html {
         text-align: center;
         width: 100%;
     }
+
+    /* Center Services Content on Mobile */
+    .services-content {
+        justify-content: center; /* Center the grid items */
+        padding: 0 3%; /* Adjust padding for mobile */
+        margin: 0 auto; /* Center the container */
+        width: 100%; /* Ensure full width */
+    }
+
+    .row {
+        margin: 0 auto; /* Center individual cards */
+        width: 90%; /* Limit card width */
+        max-width: 350px; /* Match grid minimum */
+    }
 }
 
 @media (max-width: 617px) {
     .home-img {
         width: 110vw;
         margin-top: 8rem;
-        
     }
     .home-img img {
-        margin-right: 29rem;
+        margin-right: 29rem; /* Consider reducing this value */
     }
 
     .home-img::before {
         font-size: 6rem; 
         line-height: 6rem;
+    }
+
+    .about-img img {
+        width: 300px; 
+    }
+
+    .about-content .heading {
+        font-size: 4rem; 
+    }
+
+    .about-content p {
+        font-size: 1.3rem; 
+    }
+
+    /* Further adjust Services for smaller screens */
+    .services-content {
+        padding: 0 2%; /* Tighter padding */
+    }
+
+    .row {
+        width: 85%; /* Slightly narrower */
+        max-width: 300px; /* Adjust for tiny screens */
     }
 }
 
@@ -665,10 +699,38 @@ html {
         font-size: 5rem; 
         line-height: 5rem;
     }
+
+    .about {
+        padding: 6rem 3% 1rem; 
+    }
+
+    .about-img img {
+        width: 250px; 
+    }
+
+    .about-content .heading {
+        font-size: 3rem; 
+    }
+
+    .about-content p {
+        font-size: 1.2rem; 
+    }
+
+    .services {
+        padding: 4rem 2% 1rem; /* Reduce padding further */
+    }
+
+    .services-content {
+        padding: 0 1%; /* Minimal padding */
+    }
+
+    .row {
+        width: 80%; /* Narrower for very small screens */
+        max-width: 280px; /* Fine-tune width */
+    }
 }
 
-/* //sticky header code */
-
+/* Sticky header code */
 header.sticky {
     background: var(--bg-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -677,8 +739,6 @@ header.sticky {
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
-
-
 
 /* Modal Styles */
 .modal {
@@ -811,7 +871,6 @@ header.sticky {
         font-size: 1.4rem;
     }
 }
-
 
 .modal-content .submit-btn {
     width: 100%;
